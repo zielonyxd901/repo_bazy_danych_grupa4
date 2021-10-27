@@ -1,0 +1,29 @@
+1.2) INSERT INTO postac VALUES
+(1,'Bjorn', 'wiking', '1000-12-31', 36),
+(2,'Drozd', 'ptak', '1000-10-20', 37),
+(3,'Tesciowa','kobieta','0981-01-01',60);
+
+1.3) Update postac SET wiek=88 WHERE nazwa='Tesciowa';
+
+2.1) CREATE table walizka(id_walizki int  primary key auto_increment, pojemnosc int  unsigned, kolor enum('rozowy','czerwony','teczowy','zolty'), id_wlasciciela int);
+
+2.1) alter table walizka add foreign key (id_wlasciciela) references postac(id_postaci) on delete cascade;
+
+2.2) alter table walizka alter kolor set default 'rozowy';
+
+2.3)insert into walizka Values(default,100,'czerwony',1),
+(default,100,'teczowy',3);
+
+3.1) create table izba(adres_budynku varchar(40), nazwa_izby varchar(40),metraz int unsigned,wlasciciel int, Primary key(adres_budynku,nazwa_izby));
+
+3.1) alter table izba add foreign key (wlasciciel) references walizka(id_wlasciciela) on delete set null;
+
+3.2) alter table izba add column kolor_izby varchar(40) after metraz;
+
+3.2) alter table izba alter kolor_izby set default 'czarny';
+
+3.3) insert into izba values('Kowalskiego 36', 'spizarnia',500,default,3);
+
+
+
+
