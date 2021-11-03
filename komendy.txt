@@ -32,4 +32,21 @@
 
 4.2) insert into przetwory values(default,default,1,'bigos',default,2);
 
+5.1) INSERT INTO postac VALUES (1,'jorn', 'wiking', '1000-12-31', 32),(1,'orn', 'wiking', '1000-12-31', 38),(1,'Born', 'wiking', '1000-12-31', 36),(1,'jor', 'wiking', '1000-12-31', 31),(1,'felix', 'wiking', '1000-12-31', 50);
+
+5.2) CREATE TABLE statek(nazwa_statku varchar(20) primary key,rodzaj_statku enum('lodka','okret','statek'),data_wodowania date, max_ladownosc int unsigned);
+
+5.3) insert into statek values('zebra','okret','1000-12-31',300),('pancernik','lodka','1222-01-01',5);
+
+5.4) alter table postac add column funkcja varchar(50);
+
+5.5) UPDATE postac SET funkcja='kapitan' WHERE nazwa = "Bjorn";
+
+5.6)
+
+5.7)
+
+5.8) DELETE FROM izba WHERE nazwa_izby = "spizarnia"
+
+5.9)  DROP TABLE izba;
 
