@@ -32,7 +32,7 @@
 
 4.2) insert into przetwory values(default,default,1,'bigos',default,2);
 
-5.1) INSERT INTO postac VALUES (1,'jorn', 'wiking', '1000-12-31', 32),(1,'orn', 'wiking', '1000-12-31', 38),(1,'Born', 'wiking', '1000-12-31', 36),(1,'jor', 'wiking', '1000-12-31', 31),(1,'felix', 'wiking', '1000-12-31', 50);
+5.1) INSERT INTO postac VALUES (default,'jorn', 'wiking', '1000-12-31', 32),(default,'orn', 'wiking', '1000-12-31', 38),(default,'Born', 'wiking', '1000-12-31', 36),(default,'jor', 'wiking', '1000-12-31', 31),(default,'felix', 'wiking', '1000-12-31', 50);
 
 5.2) CREATE TABLE statek(nazwa_statku varchar(20) primary key,rodzaj_statku enum('lodka','okret','statek'),data_wodowania date, max_ladownosc int unsigned);
 
