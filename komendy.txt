@@ -24,6 +24,12 @@
 
 3.3) insert into izba values('Kowalskiego 36', 'spizarnia',500,default,3);
 
+4.1) create table przetwory(id_przetworu int primary key auto_increment, rok_produkcji date default '1654-0-0',zawartosc varchar(50), dodatek varchar(50) default 'papryczka chilli',id_wykonawcy int, id_konsumenta int);
 
+4.1) alter table przetwory add foreign key (id_wykonawcy) references postac(id_postaci);
+
+4.1) alter table przetwory add foreign key (id_konsumenta) references postac(id_postaci);
+
+4.2) insert into przetwory values(default,default,1,'bigos',default,2);
 
 
