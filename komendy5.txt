@@ -1,0 +1,7 @@
+1.1create table malinowskij.uczestnicy select * from wikingowie.uczestnicy;
+create table malinowskij.etapy_wyprawy select * from wikingowie.etapy_wyprawy;
+create table malinowskij.sektor select * from wikingowie.sektor;
+create table malinowskij.wyprawa select * from wikingowie.wyprawa;
+1.2 select k.nazwa w.nazwa from kreatura k left join wyprawa w on k.idKreatury=w.kierownik where w.nazwa is null;
+1.3 select * from wyprawa w inner join uczestnicy u on w.id-wyprawy=u.id_wyprawy inner join ekwipunek e on e.idKreatury=u.id_uczestnika group by w.id_wyprawy;
+2.1 select kierwonik, group_concat(w.nazwa SEPARATOR '->') from wyprawa group by rodzaj;

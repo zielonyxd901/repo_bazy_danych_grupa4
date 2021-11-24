@@ -1,0 +1,17 @@
+1.1 select avg(waga) from kreatura where rodzaj='wiking';
+1.2 select rodzaj, avg(waga), count(*) from kreatura group by rodzaj;
+1.3 
+2.1 select rodzaj, sum(waga)from zasob group by rodzaj;
+2.2 select rodzaj, avg(waga) from zasob  group by rodzaj having sum(ilosc) >=4 and sum(waga) > 10;
+2.3 select count(nazwa),rodzaj from zasob group by rodzaj having sum(ilosc) > 1;
+3.1
+
+
+
+
+
+
+
+5.1select k.rodzaj,sum(e.ilosc),avg(e.ilosc*z.waga)  from kreatura k inner join ekwipunek e on k.idKreatury=e.idKreatury
+ inner join zasob z on e.idZasobu=z.idZasobu where k.rodzaj not in ('malpa','waz') and e.ilosc < 30 group by k.rodzaj having sum(e.ilosc) < 30;
+ 5.2  select k.nazwa, k.rodzaj, k.dataUr from kreatura k, (select min(dataUr) as min, max(dataUr) as max from kreatura group by rodzaj) as pod where k.dataUr=pod.min or k.dataUr=pod.max; 
